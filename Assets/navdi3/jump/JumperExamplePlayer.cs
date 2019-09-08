@@ -12,11 +12,12 @@
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.Space)) jumper.PinJump();
+            if (Input.GetKeyDown(KeyCode.Z)) jumper.PinJump();
         }
         private void FixedUpdate()
         {
             jumper.pin = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-            if (!Input.GetKey(KeyCode.Space)) jumper.PinJumpRelease();
+            if (!Input.GetKey(KeyCode.Space) && !Input.GetKey(KeyCode.Z)) jumper.PinJumpRelease();
         }
     }
 

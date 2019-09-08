@@ -36,7 +36,7 @@
 
             if (moving)
             {
-                var newFlip = jumper.pin.x < 0 ? flipOnLeft : flipOnRight;
+                var newFlip = jumper.faceleft ? flipOnLeft : flipOnRight;
                 if (newFlip != spriter.flipX)
                 {
                     spriter.flipX = newFlip;

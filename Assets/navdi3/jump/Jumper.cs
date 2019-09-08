@@ -23,6 +23,8 @@
 
         [Header("Runtime variables")]
 
+        public bool faceleft = false;
+
         public Vector2 pin = Vector2.zero;
 
         public int jumpBufferFrames = 4;
@@ -52,6 +54,11 @@
                 IsFloored()?body.velocity.y:
                 Util.tow(body.velocity.y, -y_MaxFallSpeed, jumpheld? y_Gravity:y_GravityFastFall)
             );
+
+            if (Mathf.Abs(pin.x) > float.Epsilon)
+            {
+                this.faceleft = pin.x < 0;
+            }
         }
         
         public void PinJump()

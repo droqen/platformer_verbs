@@ -24,4 +24,9 @@ public class EntityLot : MonoBehaviour
         foreach (Transform child in transform) children.Add(child.gameObject);
         foreach (var child in children) Destroy(child);
     }
+
+    public static implicit operator Transform(EntityLot entlot)
+    {
+        return entlot.transform;
+    }
 }
