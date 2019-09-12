@@ -17,6 +17,17 @@
             }
         }
 
+        public bool ContainsBank(string bankName)
+        {
+            try
+            {
+                return (this[bankName] != null);
+            } catch
+            {
+                return false;
+            }
+        }
+
         private void Start()
         {
             if (banks == null) SetupBanks();

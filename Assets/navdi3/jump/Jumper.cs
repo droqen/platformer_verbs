@@ -11,15 +11,15 @@
     {
         [Header("Jumper stats")]
 
-        public float x_MaxMoveSpeed = 75;
-        public float x_Acceleration = 25;
+        public float x_MaxMoveSpeed = 50;
+        public float x_Acceleration = 50;
         //public float x_Friction = 20;
-        public float x_AccelerationInAir = 12;
+        public float x_AccelerationInAir = 50;
 
         public float y_Gravity = 10;
-        public float y_GravityFastFall = 20;
-        public float y_JumpSpeed = 200;
-        public float y_MaxFallSpeed = 400;
+        public float y_GravityFastFall = 10;
+        public float y_JumpSpeed = 150;
+        public float y_MaxFallSpeed = 200;
 
         [Header("Runtime variables")]
 
