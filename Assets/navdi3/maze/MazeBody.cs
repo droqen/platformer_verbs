@@ -11,7 +11,7 @@
         virtual public void OnSetup() { }
         virtual public void OnMoved(twin prev_pos, twin target_pos) { }
 
-        protected twin lastMove = twin.zero;
+        public twin lastMove { get; protected set; }
 
         [HideInInspector] public MazeMaster master;
         twin _my_cell_pos;
