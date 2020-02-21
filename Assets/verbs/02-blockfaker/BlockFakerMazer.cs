@@ -44,7 +44,6 @@ public class BlockFakerMazer : MazeBody
 
 
 
-
     public void UpdateHelper_FaceFacingDir()
 	{
 		if (facingDir != twin.zero)

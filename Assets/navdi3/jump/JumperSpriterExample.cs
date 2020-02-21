@@ -17,6 +17,8 @@
         public int floorTurnSprite = -1;
         public int[] floorMoveSprites = { -1 };
         public int airSprite = -1;
+        public int airJumpingSprite = -1;
+        public int airFallingSprite = -1;
 
         [Header("Animation mods & rates")]
         public float moveAnimSpeed = 0.25f;
@@ -63,6 +65,8 @@
             {
                 anim = landingAnimFrame;
                 SetSprite(airSprite);
+                if (jumper.body.velocity.y > 0) SetSprite(airJumpingSprite);
+                else SetSprite(airFallingSprite);
             }
         }
 
